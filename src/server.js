@@ -6,7 +6,7 @@ const server = express();
 
 server.use(express.json());
 const port = 5000;
-server.use("/Authors", AuthorsService);
+server.use("/authors", AuthorsService);
 
 server.listen(port, () => {
     console.log('server is running on port 5000');

@@ -1,10 +1,1 @@
-[
-    {
-        "name": "john",
-        "surname":"kumar",
-        "id":"1",
-        "email":"john@gmail.com",
-        "date of birth":"2015-08-05",
-        "avatar":"https://smashinglogo.com/static/img/virtual-designers/peter.gif"
-    }
-]
+[{"id":"1o3dp4nz3ks7lo7ao"},{"id":"1o3dp4nz3ks7lr05x","createdAt":"2021-08-11T14:43:02.421Z"},{"category":"ARTICLE CATEGORY","title":"ARTICLE TITLE","cover":"ARTICLE COVER (IMAGE LINK)","readTime":{"value":2,"unit":"minute"},"author":{"name":"AUTHOR AVATAR NAME","avatar":"AUTHOR AVATAR LINK"},"content":"HTML","createdAt":"NEW DATE"},{"id":"1o3dp4o3hks7ly2pr","createdAt":"2021-08-11T14:48:32.318Z"}]
