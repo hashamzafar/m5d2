@@ -1,0 +1,23 @@
+[
+	{
+		"id": "1o3dp4ojvks7myzk0",
+		"category": "ARTICLE CATEGORY",
+		"title": "ARTICLE TITLE",
+		"cover": "ARTICLE COVER (IMAGE LINK)",
+		"readTime": { "value": 2, "unit": "minute" },
+		"author": { "name": "AUTHOR AVATAR NAME", "avatar": "AUTHOR AVATAR LINK" },
+		"content": "HTML",
+		"createdAt": "2021-08-11T15:17:14.496Z"
+	},
+	{
+		"id": "1o3dp4u23ks8xef56",
+		"category": "adventure",
+		"title": "Harry Porter",
+		"cover": "final death",
+		"readTime": { "value": 2, "unit": "minute" },
+		"author": {
+			"name": "AUTHOR ",
+			"avatar": "https://media.gqitalia.it/photos/5ec3ca47a63ee8cb452d9ce4/master/pass/Avatar.jpg"
+		}
+	}
+]
