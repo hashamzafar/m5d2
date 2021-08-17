@@ -1,5 +1,5 @@
 import express from 'express';
-import AuthorsService from "./services/authors/index.js"
+import route from "./services/authors/index.js"
 import cors from "cors"
 import {
     notFoundErrorHandler,
@@ -14,14 +14,13 @@ const server = express();
 
 server.use(cors())
 server.use(express.json());
-const port = 5000;
 
-server.use("/authors", AuthorsService);
+server.use("/authors", route);
 server.use(notFoundErrorHandler)
 server.use(badRequestErrorHandler)
 server.use(forbiddenErrorHandler)
 server.use(genericServerErrorHandler)
-
+const port = process.env.PORT
 
 
 server.listen(port, () => {

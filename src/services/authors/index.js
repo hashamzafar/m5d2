@@ -36,7 +36,7 @@ route.get("/", async (req, res, next) => {
 route.get("/:id", async (req, res, next) => {
     try {
         const authors = await getAuthors()
-
+        console.log(authors)
         const author = authors.find(b => b.id === req.params.id)
         if (author) {
             res.send(author)
