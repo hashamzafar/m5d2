@@ -1,5 +1,6 @@
 import express from 'express';
 import route from "./services/authors/index.js"
+import blogsRouter from "./services/blogpost/index.js"
 import cors from "cors"
 import {
     notFoundErrorHandler,
@@ -7,6 +8,10 @@ import {
     forbiddenErrorHandler,
     genericServerErrorHandler,
 } from "./errorHandlers.js";
+import { join } from "path"
+
+const publicFolderPath = join(process.cwd(), "public")
+
 
 const server = express();
 
@@ -22,10 +27,15 @@ const corsOpts = {
         }
     }
 }
+server.use(express.static(publicFolderPath))
 server.use(cors(corsOpts))
 server.use(express.json());
 
 server.use("/authors", route);
+server.use("/blogs", blogsRouter)
+
+
+
 server.use(notFoundErrorHandler)
 server.use(badRequestErrorHandler)
 server.use(forbiddenErrorHandler)
@@ -37,3 +47,5 @@ const port = process.env.PORT// COMING FROM ENV FILE
 server.listen(port, () => {
     console.log('server is running on port 5000');
 })
+
+server.on("error", (error) => { console.log(error) })

@@ -94,4 +94,10 @@ route.delete("/:id", async (req, res, next) => {
 })
 
 
+
+
+
+
+
+
 export default route
