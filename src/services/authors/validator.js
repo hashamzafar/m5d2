@@ -6,23 +6,6 @@ export const authorValidator = [
     body("email").exists("Email is a mandatory field!").isEmail().withMessage("Please send a valid email!"),
 ]
 
-// export const checkBlogPostSchema = checkSchema(schema)
-
-
-
-// export const checkValidationResult = (req, res, next) => {
-//     const errors = validationResult(req)
-//     if (!errors.isEmpty()) {
-//         const error = new Error("Blog post validation failed")
-//         error.status = 400
-//         error.errors = errors.array()
-//         next(error)
-
-//     }
-//     next()
-// }
-
-
 const schema = {
     title: {
         in: ["body"],

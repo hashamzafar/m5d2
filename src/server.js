@@ -2,6 +2,7 @@ import express from 'express';
 import route from "./services/authors/index.js"
 import blogsRouter from "./services/blogpost/index.js"
 import cors from "cors"
+import listEndpoints from "express-list-endpoints"
 import {
     notFoundErrorHandler,
     badRequestErrorHandler,
@@ -29,6 +30,7 @@ const corsOpts = {
 }
 server.use(express.static(publicFolderPath))
 server.use(cors(corsOpts))
+// server.use(cors())
 server.use(express.json());
 
 server.use("/authors", route);
@@ -47,5 +49,5 @@ const port = process.env.PORT// COMING FROM ENV FILE
 server.listen(port, () => {
     console.log('server is running on port 5000');
 })
-
+console.table(listEndpoints(server))
 server.on("error", (error) => { console.log(error) })
